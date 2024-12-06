@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Discussion Portal</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar">
+        <h1 class="main-heading">Discussion Portal</h1>
+      </nav>
+
+      <section id="main-container">
+        <section id="left-container">
+          <div id="lc-header">
+            <div style="display: flex; gap: 10px">
+              <div class="lc-header-btn">New Question Form</div>
+              <input
+                class="lc-header-input"
+                placeholder="Search Questions..."
+              />
+            </div>
+            <div class="favourites-btn">Favourites</div>
+          </div>
+          <div id="lc-sub-container"></div>
+        </section>
+
+        <hr />
+
+        <section id="right-container">
+          <form id="question-form">
+            <div id="right-sub-container">
+              <h2 class="right-container-heading">
+                Welcome to Discussion Portal!
+              </h2>
+              <p class="right-container-sub-heading">
+                Enter a subject and question to get started.
+              </p>
+              <input
+                class="right-container-input"
+                placeholder="Subject"
+                name="subject"
+              />
+              <textarea
+                class="right-container-textarea"
+                name="question"
+                placeholder="Question"
+                rows="10"
+              ></textarea>
+              <button type="submit" class="rc-submit-btn">Submit</button>
+            </div>
+          </form>
+
+          <div id="right-res-sub-container">
+            <div style="display: flex; flex-direction: column">
+              <h3 class="rc-res-question-heading">Question</h3>
+              <div class="rc-res-question-content"></div>
+              <div class="rc-res-question-btn">Remove</div>
+            </div>
+
+            <div>
+              <h3 class="rc-res-response-heading">Response</h3>
+              <div class="rc-res-response-box"></div>
+            </div>
+
+            <form id="right-res-form">
+              <div class="rc-res-add-response-container">
+                <h3>Add Response</h3>
+                <input type="text" placeholder="Enter Name" name="name" />
+                <textarea
+                  name="comment"
+                  rows="5"
+                  placeholder="Enter Comment"
+                ></textarea>
+                <button type="submit" class="rc-submit-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <script type="module" src="/src/main.js"></script>
+  </footer>
+</html>
